@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    n
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <img class="display-pic" src="Slack display pic.jpg" alt="" />
+      <div class="main-container">
+        <div class="container">
+          <h1>Ibukun</h1>
+          <div class="day-of-week">Tuesday</div>
+          <div class="time">10:00AM</div>
+          <p class="track">Frontend Track</p>
+          <a href="" class="gitub">My Github</a>
+        </div>
+      </div>
+    </main>
+    <script>
+      const nameOfDay = document.querySelector(".day-of-week");
+      const utcTime = document.querySelector(".time");
+
+      const present = new Date();
+
+      const dayOfWeek = present.toLocaleString("default", {
+        weekday: "long",
+      });
+
+      const timeUTC = `${present.getUTCHours()}:${present.getUTCMinutes()}:${present.getSeconds()}:${present.getUTCMilliseconds()}`;
+      utcTime.innerHTML = timeUTC;
+
+      nameOfDay.innerHTML = dayOfWeek;
+    </script>
+  </body>
+</html>
