@@ -7,7 +7,13 @@ const dayOfWeek = present.toLocaleString("default", {
   weekday: "long",
 });
 
-const timeUTC = `${present.getUTCHours()}:${present.getUTCMinutes()}:${present.getSeconds()}:${present.getUTCMilliseconds()}`;
+const doubleFigure = function (n) {
+  return ("0" + n).slice(-2);
+};
+
+const timeUTC = `${doubleFigure(present.getUTCHours())}:${doubleFigure(
+  present.getUTCMinutes()
+)}:${doubleFigure(present.getSeconds())}:${present.getUTCMilliseconds()}`;
 utcTime.innerHTML = timeUTC;
 
 nameOfDay.innerHTML = dayOfWeek;
