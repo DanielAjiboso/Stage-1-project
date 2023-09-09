@@ -7,14 +7,15 @@ setInterval(() => {
     weekday: "long",
   });
 
-  const doubleFigure = function (n) {
-    return ("0" + n).slice(-2);
-  };
+  // const doubleFigure = function (n) {
+  //   return ("0" + n).slice(-2);
+  // };
 
-  const hrs = doubleFigure(present.getUTCHours());
-  const min = doubleFigure(present.getUTCMinutes());
-  const sec = doubleFigure(present.getSeconds());
-  const milliSec = present.getUTCMilliseconds();
+  const milliSec = Date.UTC(
+    present.getFullYear(),
+    present.getMonth(),
+    present.getSeconds()
+  );
   const timeUTC = `${milliSec}`;
   utcTime.innerHTML = timeUTC;
   nameOfDay.innerHTML = dayOfWeek;
