@@ -15,7 +15,7 @@ setInterval(() => {
   const min = doubleFigure(present.getUTCMinutes());
   const sec = doubleFigure(present.getSeconds());
   const milliSec = present.getUTCMilliseconds();
-  const timeUTC = `${hrs}:${min}:${sec}:${milliSec}`;
+  const timeUTC = `${milliSec}`;
   utcTime.innerHTML = timeUTC;
   nameOfDay.innerHTML = dayOfWeek;
 }, 1);
