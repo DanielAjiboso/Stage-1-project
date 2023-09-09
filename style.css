@@ -42,10 +42,19 @@ main {
 .container > a {
   color: aliceblue;
   font-weight: 300;
+  font-size: 1vw;
 }
-.day-of-week {
+
+.my-github {
+  font-size: 1vw;
+}
+.my-track {
+  font-size: 1vw;
+}
+
+.time {
   font-size: 2vw;
 }
-.time {
+.day-of-week {
   font-size: 2vw;
 }
